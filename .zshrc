@@ -22,3 +22,6 @@ source $HOME/Plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $HOME/Plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $HOME/Plugins/sudo.zsh
 
+PATH=$PATH:$HOME/bin:$HOME/.local/bin 
+echo -e "$(cat stuff/dragon_parsed.txt)"; PF_INFO="title os host kernel uptime pkgs memory wm" pfetch
+
