@@ -164,23 +164,22 @@ for_window [class=".*"] border pixel 3
 gaps inner 4
 gaps outer 4
 exec --no-startup-id "hsetroot -fill ~/Bilder/0239.jpg"
-exec --no-startup-id polybar example
-exec --no-startup-id dunst
-exec --no-startup-id setxkbmap de
-exec --no-startup-id picom -b
-exec --no-startup-id nm-applet
-# Media player controls
-bindsym XF86AudioPlay exec --no-startup-id playerctl play
-bindsym XF86AudioPause exec --no-startup-id playerctl pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
-# pulse audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume                                                                          
+exec --no-startup-id "picom -b --experimental-backends"
+exec --no-startup-id "g810-led -fx vwave keys 0a"
+
+# volume controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
+# Media player controls
+bindsym XF86AudioPlay exec mpc --port 6942 toggle
+bindsym XF86AudioPause exec mpc --port 6942 pause
+bindsym XF86AudioNext exec mpc --port 6942 next
+bindsym XF86AudioPrev exec mpc --port 6942 previous
+
 # open firefox
-bindsym $mod+Shift+Return exec --no-startup-id "firefox-bin --new-window"
+bindsym $mod+Shift+Return exec --no-startup-id "firefox --new-window"
 
 # open a game menu
 bindsym $mod+g exec --no-startup-id "~/bin/rofi/lutris.sh"
@@ -194,3 +193,5 @@ client.urgent           #212121 #212121 #ffffff #900000   #212121
 client.placeholder      #212121 #212121 #ffffff #000000   #212121
 
 client.background       #212121
+
+exec --no-startup-id "polybar example"

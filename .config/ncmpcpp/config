@@ -1,0 +1,6 @@
+mpd_host = "localhost"
+mpd_port = "6942"
+colors_enabled = yes
+main_window_color = green_black
+statusbar_color = white_black
+header_window_color = white_black
