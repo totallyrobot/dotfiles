@@ -1,31 +1,8 @@
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-
+# _ralsei's i3 config
 
 # i3 config file (v4)
-#
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-
-# Font for window titles. Will also be used by the bar unless a different font
-font pango:mononoki Nerd Font 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -40,24 +17,12 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi -show drun -show-icons -theme oxide
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
-
-# alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -130,26 +95,18 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
+# open a menu to log off
 bindsym $mod+Shift+e exec "~/bin/rofi/powermenu.sh"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
+        # Pressing left/down will shrink the window’s width.
+        # Pressing right/up will grow the window’s width.
         bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Up resize grow height 10 px or 10 ppt
+        bindsym Down resize shrink height 10 px or 10 ppt
         bindsym Right resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
@@ -163,9 +120,11 @@ bindsym $mod+r mode "resize"
 for_window [class=".*"] border pixel 3
 gaps inner 4
 gaps outer 4
-exec --no-startup-id "hsetroot -fill ~/Bilder/0239.jpg"
+exec --no-startup-id "~/wallpapers/wallpaper.sh"
 exec --no-startup-id "picom -b --experimental-backends"
-exec --no-startup-id "g810-led -fx vwave keys 0a"
+exec --no-startup-id "g810-led -fx vwave keys 5"
+exec --no-startup-id "xfce4-panel"
+exec --no-startup-id "/lib/xfce4/notifyd/xfce4-notifyd"
 
 # volume controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -184,7 +143,10 @@ bindsym $mod+Shift+Return exec --no-startup-id "firefox --new-window"
 # open a game menu
 bindsym $mod+g exec --no-startup-id "~/bin/rofi/lutris.sh"
 
-#colors
+# lock screen
+bindsym $mod+l exec --no-startup-id "~/bin/lockscreen"
+
+# colors
 # class                 border  backgr. text    indicator child_border
 client.focused          #50fa7b #212121 #ffffff #bd93f9   #50fa7b
 client.focused_inactive #212121 #212121 #ffffff #212121   #212121
@@ -193,5 +155,3 @@ client.urgent           #212121 #212121 #ffffff #900000   #212121
 client.placeholder      #212121 #212121 #ffffff #000000   #212121
 
 client.background       #212121
-
-exec --no-startup-id "polybar example"

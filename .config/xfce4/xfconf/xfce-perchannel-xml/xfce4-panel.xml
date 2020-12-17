@@ -63,7 +63,7 @@
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-12" type="string" value="clock">
-      <property name="digital-format" type="string" value="%T"/>
+      <property name="digital-format" type="string" value="%H:%M"/>
     </property>
     <property name="plugin-13" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
@@ -71,7 +71,7 @@
     <property name="plugin-1" type="string" value="whiskermenu"/>
     <property name="plugin-2" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="firefox.instance2175;firefox.instance27713;firefox.instance7782;Lollypop"/>
+      <property name="mpris-players" type="string" value="firefox.instance2175;firefox.instance27101;firefox.instance27713;firefox.instance56899;firefox.instance7782;Lollypop;Music"/>
     </property>
     <property name="plugin-9" type="string" value="notification-plugin"/>
     <property name="plugin-10" type="string" value="xfce4-mpc-plugin"/>

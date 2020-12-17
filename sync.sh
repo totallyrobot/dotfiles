@@ -24,3 +24,4 @@ cp ~/.p10k.zsh .p10k.zsh
 cp -r ~/wallpapers ./
 cp -r ~/stuff ./
 cp -r ~/bin/rofi bin/
+cp ~/bin/lockscreen bin/lockscreen
