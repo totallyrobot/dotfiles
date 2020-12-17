@@ -9,7 +9,8 @@ mkdir -p .config/rofi
 mkdir -p .config/nvim
 mkdir -p .config/ncmpcpp
 mkdir -p .config/xfce4/xfconf/xfce-perchannel-xml/
-mkdir wallpapers
+mkdir -p wallpapers
+mkdir -p bin
 cp ~/.config/picom.conf .config/picom.conf
 cp ~/.config/i3/config .config/i3/config
 cp -r ~/.config/alacritty .config/
@@ -22,3 +23,4 @@ cp ~/.zshrc .zshrc
 cp ~/.p10k.zsh .p10k.zsh
 cp -r ~/wallpapers ./
 cp -r ~/stuff ./
+cp -r ~/bin/rofi bin/
