@@ -1,3 +1,3 @@
 # TotallyRobot's dotfiles
 ## Screenshot
-[images/desktop.png]
+(images/desktop.png)
