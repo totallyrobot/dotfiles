@@ -14,10 +14,13 @@ my dotfiles using neovim, zsh, powerlevel10k, xfce, rofi, alacritty, picom, and 
 	xfce4-mpc-plugin
 	mpc
 	ncmpcpp
+        mpd
 	pactl
 	hsetroot
 	rofi
 	picom-jonaburg-git (aur)
 	i3-gaps
 	alacritty
+        i3lock-color (aur)
+
 
