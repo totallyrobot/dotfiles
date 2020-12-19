@@ -27,7 +27,6 @@ export VISUAL="$EDITOR"
 export FILE="nnn"
 # source some stuff
 source /usr/share/doc/pkgfile/command-not-found.zsh
-source /usr/share/zsh/plugins/zsh-autopair/autopair.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 PATH=$PATH:$HOME/bin:$HOME/.local/bin
