@@ -11,20 +11,14 @@ zmodload zsh/complist
 compinit
 autoload -U colors
 colors
-#PS1="%{$fg[blue]%}\$%{$reset_color%} "
-#RPS1="%{$fg[black]%}%{$bg[blue]%}%{$reset_color%}%{$bg[blue]%}$USER@${host} %{$fg[blue]%}%{$bg[green]%}%{$reset_color%}%{$bg[green]%} %~ %{$reset_color%}%{$fg[green]%}%{$reset_color%}"
 
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh-history
 
-alias ls="ls --color=auto"
-alias sl="ls --color=auto"
-alias vi="nvim"
-alias vim="nvim"
-export EDITOR="nvim"
-export VISUAL="$EDITOR"
-export FILE="nnn"
+alias ls="ls --color=auto" sl="ls --color=auto"
+alias vi="nvim" vim="nvim"
+export EDITOR="nvim" VISUAL="nvim" FILE="nnn"
 # source some stuff
 source /usr/share/doc/pkgfile/command-not-found.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
