@@ -4,6 +4,7 @@
   <property name="configver" type="int" value="2"/>
   <property name="panels" type="array">
     <value type="int" value="1"/>
+    <value type="int" value="2"/>
     <property name="panel-1" type="empty">
       <property name="position" type="string" value="p=6;x=0;y=0"/>
       <property name="length" type="uint" value="100"/>
@@ -15,7 +16,6 @@
         <value type="int" value="4"/>
         <value type="int" value="3"/>
         <value type="int" value="5"/>
-        <value type="int" value="10"/>
         <value type="int" value="2"/>
         <value type="int" value="6"/>
         <value type="int" value="11"/>
@@ -35,7 +35,20 @@
       <property name="disable-struts" type="bool" value="false"/>
       <property name="nrows" type="uint" value="1"/>
       <property name="autohide-behavior" type="uint" value="0"/>
+      <property name="mode" type="uint" value="0"/>
     </property>
+    <property name="panel-2" type="empty">
+      <property name="position" type="string" value="p=12;x=973;y=1052"/>
+      <property name="size" type="uint" value="48"/>
+      <property name="mode" type="uint" value="0"/>
+      <property name="length" type="uint" value="1"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="7"/>
+      </property>
+      <property name="autohide-behavior" type="uint" value="1"/>
+      <property name="icon-size" type="uint" value="0"/>
+    </property>
+    <property name="dark-mode" type="bool" value="false"/>
   </property>
   <property name="plugins" type="empty">
     <property name="plugin-3" type="string" value="separator">
@@ -45,6 +58,7 @@
     <property name="plugin-4" type="string" value="pager">
       <property name="rows" type="uint" value="1"/>
       <property name="miniature-view" type="bool" value="false"/>
+      <property name="numbering" type="bool" value="false"/>
     </property>
     <property name="plugin-5" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
@@ -53,11 +67,22 @@
       <property name="show-frame" type="bool" value="false"/>
       <property name="square-icons" type="bool" value="true"/>
       <property name="names-ordered" type="array">
+        <value type="string" value="obs"/>
         <value type="string" value="netzwerk-manager-applet"/>
         <value type="string" value="vlc"/>
         <value type="string" value="gmpc"/>
         <value type="string" value="steam"/>
         <value type="string" value="lutris"/>
+      </property>
+      <property name="known-items" type="array">
+        <value type="string" value="discord1"/>
+        <value type="string" value="vlc"/>
+        <value type="string" value="obs"/>
+        <value type="string" value="net.lutris.Lutris"/>
+        <value type="string" value="steam"/>
+      </property>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="netzwerk-manager-applet"/>
       </property>
     </property>
     <property name="plugin-11" type="string" value="separator">
@@ -66,16 +91,22 @@
     <property name="plugin-12" type="string" value="clock">
       <property name="digital-format" type="string" value=" %H:%M"/>
       <property name="tooltip-format" type="string" value="%A %d %B %Y"/>
+      <property name="mode" type="uint" value="2"/>
     </property>
     <property name="plugin-13" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
     </property>
     <property name="plugin-1" type="string" value="whiskermenu"/>
     <property name="plugin-2" type="string" value="pulseaudio">
-      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="firefox.instance1275;firefox.instance2127;firefox.instance2175;firefox.instance26375;firefox.instance27101;firefox.instance27713;firefox.instance30691;firefox.instance35763;firefox.instance5376;firefox.instance56899;firefox.instance7782;Lollypop;Music;vlc"/>
+      <property name="enable-keyboard-shortcuts" type="bool" value="false"/>
+      <property name="mpris-players" type="string" value="firefox.instance1119;firefox.instance1127;firefox.instance1145;firefox.instance11708;firefox.instance1176;firefox.instance1247;firefox.instance1275;firefox.instance13494;firefox.instance1411;firefox.instance14419;firefox.instance1504;firefox.instance1637;firefox.instance1670;firefox.instance20729;firefox.instance2127;firefox.instance2175;firefox.instance21885;firefox.instance2228;firefox.instance2462;firefox.instance25384;firefox.instance26375;firefox.instance26881;firefox.instance2699;firefox.instance27101;firefox.instance2726;firefox.instance27713;firefox.instance3007;firefox.instance30691;firefox.instance3312;firefox.instance3341;firefox.instance3519;firefox.instance3563;firefox.instance35763;firefox.instance36238;firefox.instance36424;firefox.instance36530;firefox.instance3869;firefox.instance5291;firefox.instance5376;firefox.instance56899;firefox.instance5713;firefox.instance6914;firefox.instance6937;firefox.instance7782;firefox.instance9999;Lollypop;Music;vlc"/>
     </property>
     <property name="plugin-9" type="string" value="notification-plugin"/>
-    <property name="plugin-10" type="string" value="xfce4-mpc-plugin"/>
+    <property name="plugin-7" type="string" value="tasklist">
+      <property name="show-handle" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="false"/>
+      <property name="flat-buttons" type="bool" value="true"/>
+      <property name="grouping" type="uint" value="1"/>
+    </property>
   </property>
 </channel>

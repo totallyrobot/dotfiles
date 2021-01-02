@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# autostart script by all x11 window managers on my system
+xfce4-panel &
+picom --experimental-backends -b
+~/wallpapers/wallpaper.sh &
+/lib/xfce4/notifyd/xfce4-notifyd &
+g810-led -fx vwave keys 5 &

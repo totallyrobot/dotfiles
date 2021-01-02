@@ -120,16 +120,7 @@ bindsym $mod+r mode "resize"
 for_window [class=".*"] border pixel 3
 gaps inner 4
 gaps outer 4
-exec --no-startup-id "~/wallpapers/wallpaper.sh"
-exec --no-startup-id "picom -b --experimental-backends"
-exec --no-startup-id "g810-led -fx vwave keys 5"
-exec --no-startup-id "xfce4-panel"
-exec --no-startup-id "/lib/xfce4/notifyd/xfce4-notifyd"
-
-# volume controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+exec --no-startup-id "~/stuff/autostart"
 
 # Media player controls
 bindsym XF86AudioPlay exec mpc --port 6942 toggle

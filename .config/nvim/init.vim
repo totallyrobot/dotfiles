@@ -16,7 +16,7 @@ Plugin 'Shougo/denite.nvim'
 Plugin 'Shougo/unite.vim'
 Plugin 'liuchengxu/vim-which-key'
 Plugin 'tpope/vim-fugitive'
-"Plugin 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-commentary'
 call vundle#end()               " required
