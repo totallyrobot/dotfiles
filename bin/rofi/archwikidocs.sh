@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env dash
 
 DMENU="rofi -theme oxide -dmenu -i"
 DMENU=${DMENU:-dmenu}

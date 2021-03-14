@@ -3,6 +3,12 @@
  * User: dikiaap
  * Copyright: Diki Ananta
  **/
+
+configuration {
+        modi: "window,run,drun,ssh";
+        show-icons: true;
+}
+
 * {
     selected-normal-foreground:  #000000;
     foreground:                  rgba ( 196, 202, 212, 100 % );

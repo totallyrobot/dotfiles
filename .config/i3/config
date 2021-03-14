@@ -14,7 +14,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show drun -show-icons -theme oxide
+bindsym $mod+d exec rofi -show drun -show-icons
 
 # change focus
 bindsym $mod+Left focus left
@@ -129,7 +129,7 @@ bindsym XF86AudioNext exec mpc --port 6942 next
 bindsym XF86AudioPrev exec mpc --port 6942 previous
 
 # open firefox
-bindsym $mod+Shift+Return exec --no-startup-id "firefox --new-window"
+bindsym $mod+Shift+Return exec --no-startup-id "firefox-nightly --new-window"
 
 # open a game menu
 bindsym $mod+g exec --no-startup-id "~/bin/rofi/lutris.sh"
@@ -146,3 +146,5 @@ client.urgent           #212121 #212121 #ffffff #900000   #212121
 client.placeholder      #212121 #212121 #ffffff #000000   #212121
 
 client.background       #212121
+
+exec --no-startup-id "otd"

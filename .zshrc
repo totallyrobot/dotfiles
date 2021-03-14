@@ -1,4 +1,4 @@
-echo -e "$(cat $HOME/stuff/dragon_parsed.txt)"; PF_INFO="title os host kernel uptime pkgs memory wm" pfetch
+echo -e "$(cat $HOME/stuff/dragon_parsed.txt)"; PF_INFO="title os kernel uptime pkgs memory wm" pfetch
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -18,7 +18,8 @@ HISTFILE=~/.zsh-history
 
 alias ls="ls --color=auto" sl="ls --color=auto"
 alias vi="nvim" vim="nvim"
-export EDITOR="nvim" VISUAL="nvim" FILE="nnn"
+export EDITOR="nvim" VISUAL="nvim" FILE="nnn" BROWSER="firefox-nightly"
+alias sudo="sudo "
 # source some stuff
 source /usr/share/doc/pkgfile/command-not-found.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

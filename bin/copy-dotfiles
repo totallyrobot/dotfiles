@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# this script puts my dotfiles in this directory to push them to github
+# this script puts my dotfiles in a folder
 cd $1
 mkdir -p .config/alacritty
 mkdir -p .config/i3
@@ -16,7 +16,7 @@ cp ~/.config/i3/config .config/i3/config
 cp -r ~/.config/alacritty .config/
 # cp ~/.config/polybar/config .config/polybar/config
 cp ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml .config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml 
-cp ~/.config/rofi/oxide.rasi .config/rofi/oxide.rasi
+cp ~/.config/rofi/config.rasi .config/rofi/config.rasi
 cp ~/.config/nvim/init.vim .config/nvim/init.vim
 cp ~/.config/ncmpcpp/config .config/ncmpcpp/config
 cp ~/.zshrc .zshrc

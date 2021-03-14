@@ -3,7 +3,7 @@ filetype off
 set rtp+=~/.config/nvim/bundle/Vundle.Vim
 call vundle#begin('~/.config/nvim/bundle')
 Plugin 'VundleVim/Vundle.Vim'
-Plugin 'joshdick/onedark.vim'
+Plugin 'totallyrobot/onedark.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Raimondi/delimitMate'
@@ -19,6 +19,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'jceb/vim-orgmode'
 Plugin 'tpope/vim-commentary'
+Plugin 'vbe0201/vimdiscord'
+Plugin 'skanehira/badapple.vim'
 call vundle#end()               " required
 filetype plugin indent on       " required
 
@@ -51,13 +53,16 @@ let g:which_key_map.w = {
 let g:which_key_map.c = {
                         \ 'name': '+config-files',
                         \ 'w': 'i3-config',
-                        \ 'v': 'nvim-config',
+                        \ 'v': 'neovim-config',
                         \ 'z': {
                         \       'name': '+zsh',
                         \       'z': 'zsh-config',
                         \       'p': 'p10k-config',
                         \ },
                         \ 'a': 'alacritty-config',
+                        \ 'p': 'polybar-config',
+                        \ 'c': 'picom-config',
+                        \ 'r': 'rofi-config'
                         \}
 
 let g:which_key_map.p = {
@@ -152,6 +157,9 @@ nnoremap <silent> <Leader>cw :edit $HOME/.config/i3/config<CR>:echom ''<CR>
 nnoremap <silent> <Leader>czz :edit $HOME/.zshrc<CR>:echom ''<CR>
 nnoremap <silent> <Leader>czp :edit $HOME/.p10k.zsh<CR>:echom ''<CR>
 nnoremap <silent> <Leader>ca :edit $HOME/.config/alacritty/alacritty.yml<CR>:echom ''<CR>
+nnoremap <silent> <Leader>cr :edit $HOME/.config/rofi/config.rasi<CR>:echom ''<CR>
+nnoremap <silent> <Leader>cp :edit $HOME/.config/polybar/config<CR>:echom ''<CR>
+nnoremap <silent> <Leader>cc :edit $HOME/.config/picom.conf<CR>:echom ''<CR>
 " git
 nnoremap <silent> <Leader>gca :Git add .<CR>:Git commit<CR>
 nnoremap <silent> <Leader>gcc :Git commit<CR>

@@ -1,1 +1,1 @@
-hsetroot -fill wallpapers/68992184_p0.png
+hsetroot -fill wallpapers/64654000_p0.png
