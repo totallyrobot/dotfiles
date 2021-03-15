@@ -14,10 +14,11 @@ mkdir -p bin
 cp ~/.config/picom.conf .config/picom.conf
 cp ~/.config/i3/config .config/i3/config
 cp -r ~/.config/alacritty .config/
-# cp ~/.config/polybar/config .config/polybar/config
-cp ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml .config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml 
+cp ~/.config/polybar/config .config/polybar/config
+#cp ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml .config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml 
 cp ~/.config/rofi/config.rasi .config/rofi/config.rasi
 cp ~/.config/nvim/init.vim .config/nvim/init.vim
+cp -r ~/.config/nvim/configs/ .config/nvim/
 cp ~/.config/ncmpcpp/config .config/ncmpcpp/config
 cp ~/.zshrc .zshrc
 cp ~/.p10k.zsh .p10k.zsh

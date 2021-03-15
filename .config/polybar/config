@@ -1,0 +1,244 @@
+;========================================================
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;==========================================================
+
+[colors]
+background = #73000000
+background-alt = #212121
+foreground = #ffffff
+foreground-alt = #000000
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+[bar/example]
+width = 100%
+height = 33
+radius = 0.0
+fixed-center = false
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+bottom = false
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = NotoSansMono Nerd Font:size=10
+font-1 = NotoSansMono Nerd Font:size=28
+
+modules-left = i3
+modules-center = 
+modules-right = pl-divider-1 mpd pl-divider-2 pl-divider-1 pulseaudio eth memory cpu date pl-divider-2 pl-divider-1
+
+tray-position = right
+tray-padding = 4
+tray-background = ${colors.background-alt}
+
+wm-restack = i3
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+[module/xwindow]
+type = internal/xwindow
+label = "   %title:0:30:...% "
+label-background = ${colors.background}
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+
+mount-0 = /
+
+label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-unmounted = %mountpoint% not mounted
+label-unmounted-foreground = ${colors.foreground}
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = #f1fa8c
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-foreground = ${colors.foreground-alt}
+label-focused-background = #50fa7b
+label-focused-underline = #00000000
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-padding = 2
+label-unfocused-background = ${colors.background}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = ${self.label-focused-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+
+[module/mpd]
+type = internal/mpd
+format-online = <label-song> 
+
+port = 6942
+
+label-song =  %artist% - %title%
+label-song-background = ${colors.background-alt}
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 25
+label-song-ellipsis = true
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "   "
+format-prefix-foreground = #ffffff
+
+format-prefix-background = ${colors.background-alt}
+label = %percentage:2%%
+label-background = ${colors.background-alt}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "   "
+format-prefix-background = ${colors.background-alt}
+format-prefix-foreground = #ffffff
+label = %percentage_used%%
+
+label-background = ${colors.background-alt}
+
+[module/eth]
+type = internal/network
+interface = enp8s0
+interval = 2.0
+
+format-connected-prefix = "  "
+format-connected-prefix-foreground = ${colors.foreground}
+format-connected-prefix-background = ${colors.background-alt}
+label-connected = %upspeed% %downspeed%
+label-connected-background = ${colors.background-alt}
+
+format-disconnected =
+;format-disconnected = <label-disconnected>
+;format-disconnected-underline = ${self.format-connected-underline}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %d.%m.%Y"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix = "   "
+format-prefix-foreground = #ffffff
+
+format-prefix-background = ${colors.background-alt}
+label = "%date% %time% "
+
+label-background = ${colors.background-alt}
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume><bar-volume>
+format-volume-background = ${colors.background-alt}
+label-volume = " 墳 %percentage%% "
+label-volume-foreground = ${root.foreground}
+
+label-volume-background = ${colors.background-alt}
+bar-empty-background = ${colors.background-alt}
+label-muted = " 婢 "
+label-muted-foreground = #666
+
+label-muted-background = ${colors.background-alt}
+
+bar-volume-empty-background = ${colors.background-alt}
+bar-volume-fill-background = ${colors.background-alt}
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 1
+bar-volume-indicator-background = ${colors.background-alt}
+bar-volume-fill = ─
+bar-volume-fill-font = 1
+bar-volume-empty = ─
+bar-volume-empty-font = 1
+bar-volume-empty-foreground = ${colors.foreground}
+
+[module/pl-divider-1]
+type = custom/text
+content = 
+content-font = 2
+content-background = ${colors.background}
+content-foreground = ${colors.background-alt}
+
+[module/pl-divider-2]
+type = custom/text
+content = ""
+content-font = 2
+content-background = ${colors.background}
+content-foreground = ${colors.background-alt}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
+
+
+
+[global/wm]
+margin-top = 0
+margin-bottom = 5
+
+; vim:ft=dosini

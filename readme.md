@@ -4,21 +4,22 @@ my dotfiles using neovim, zsh, powerlevel10k, xfce, rofi, alacritty, picom, and 
 ![](images/desktop.png)
 ## dependencies (arch)
 
-	nvim
+	neovim-nightly-bin (aur)
 	zsh
 	zsh-theme-powerlevel10k-git (aur)
-	xfce4-panel
-	xfce4-pulseaudio-plugin
-	xfce4-notifyd
-	xfce4-whiskermenu-plugin
-	xfce4-mpc-plugin
+        zsh-autosuggestions
+        zsh-syntax-highlighting
+        zsh-completions
+        pkgfile
+        dunst
+        polybar
 	mpc
 	ncmpcpp
         mpd
 	pactl
 	hsetroot
 	rofi
-	picom-jonaburg-git (aur)
+	picom-git (aur)
 	i3-gaps
 	alacritty
         i3lock-color (aur)
