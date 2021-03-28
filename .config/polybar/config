@@ -46,7 +46,7 @@ font-1 = NotoSansMono Nerd Font:size=28
 
 modules-left = i3
 modules-center = 
-modules-right = pl-divider-1 mpd pl-divider-2 pl-divider-1 pulseaudio eth memory cpu date pl-divider-2 pl-divider-1
+modules-right = pl-divider-1 pulseaudio eth memory cpu date pl-divider-2 pl-divider-1
 
 tray-position = right
 tray-padding = 4

@@ -1,5 +1,8 @@
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'romgrk/doom-one.vim'
+Plug 'Matsuuu/pinkmare'
+Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'connorholyday/vim-snazzy'
 " statusbar
 Plug 'glepnir/galaxyline.nvim'
 " automatic closing of quotes and brackets
@@ -10,6 +13,7 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'junegunn/fzf.vim'
 " shows lines at indented lines 
 Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 " icons are neat
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -32,18 +36,18 @@ Plug 'neoclide/coc.nvim'
 Plug 'preservim/tagbar'
 " buffer bar
 Plug 'romgrk/barbar.nvim'
+" syntax highlighting for more languages
+Plug 'sheerun/vim-polyglot'
 call plug#end()
-filetype plugin indent on       " required
-
-" luafile ~/.config/nvim/init.lua
 
 " various other settings
 set mouse=a
 set nowrap
 set number
+set cursorline
 set relativenumber
 set termguicolors
-colorscheme doom-one
+colorscheme deep-space
 set noshowmode
 set autoindent
 set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾
@@ -212,5 +216,5 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-"go into insert mode in terminal if it is clicked
+" go into insert mode in terminal if it is clicked
 nnoremap <silent><expr> <LeftMouse> (&buftype ==# 'terminal' ? ':startinsert<CR>' : '')

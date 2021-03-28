@@ -146,5 +146,3 @@ client.urgent           #212121 #212121 #ffffff #900000   #212121
 client.placeholder      #212121 #212121 #ffffff #000000   #212121
 
 client.background       #212121
-
-exec --no-startup-id "otd"

@@ -3,7 +3,7 @@
 SUDO="doas"
 SUDO=${SUDO:-sudo}
 
-DMENU="rofi -theme oxide -dmenu -p Power Option'"
+DMENU="rofi -dmenu -p Power Option'"
 
 output=$(echo -en "Poweroff\nReboot\nLogoff" | ${DMENU})
 

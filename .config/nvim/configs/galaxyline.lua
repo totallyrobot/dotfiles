@@ -5,6 +5,13 @@ local condition = require('galaxyline.condition')
 local gls = gl.section
 gl.short_line_list = {'NvimTree','vista','dbui','packer'}
 
+gls.right[1] = {
+  adsdase = {
+    provider = function ()  return "" end,
+    highlight = {colors.bg, "#282c34"},
+  },
+}
+
 gls.left[1] = {
   RainbowRed = {
     provider = function() return '▊ ' end,
@@ -29,7 +36,7 @@ gls.left[2] = {
     highlight = {colors.red,colors.bg,'bold'},
   },
 }
-gls.right[1] = {
+gls.right[2] = {
   FileSize = {
     provider = 'FileSize',
     condition = condition.buffer_not_empty,
@@ -52,7 +59,7 @@ gls.left[5] = {
   }
 }
 
-gls.right[2] = {
+gls.right[3] = {
   LineInfo = {
     provider = 'LineColumn',
     separator = ' ',
@@ -61,7 +68,7 @@ gls.right[2] = {
   },
 }
 
-gls.right[3] = {
+gls.right[4] = {
   PerCent = {
     provider = 'LinePercent',
     separator = ' ',
@@ -81,7 +88,7 @@ gls.left[9] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
     icon = '  ',
-    highlight = {colors.yellow,colors.bg},
+    highlight = {colors.yellow2,colors.bg},
   }
 }
 
@@ -95,13 +102,19 @@ gls.left[10] = {
 
 gls.left[11] = {
   DiagnosticInfo = {
-    provider = 'DiagnosticInfo',
-    icon = '  ',
-    highlight = {colors.blue,colors.bg},
+      provider = 'DiagnosticInfo',
+      icon = '  ',
+      highlight = {colors.blue,colors.bg},
+    }
+}
+gls.left[12] = {
+  kjjljkj = {
+    provider = function () return '' end,
+    highlight = {colors.bg, "#282c34"},
   }
 }
 
-gls.right[4] = {
+gls.right[5] = {
   FileEncode = {
     provider = 'FileEncode',
     condition = condition.hide_in_width,
@@ -111,7 +124,7 @@ gls.right[4] = {
   }
 }
 
-gls.right[5] = {
+gls.right[6] = {
   FileFormat = {
     provider = 'FileFormat',
     condition = condition.hide_in_width,
@@ -121,7 +134,7 @@ gls.right[5] = {
   }
 }
 
-gls.right[6] = {
+gls.right[7] = {
   GitIcon = {
     provider = function() return '  ' end,
     condition = condition.check_git_workspace,
@@ -131,7 +144,7 @@ gls.right[6] = {
   }
 }
 
-gls.right[7] = {
+gls.right[8] = {
   GitBranch = {
     provider = 'GitBranch',
     condition = condition.check_git_workspace,
@@ -139,7 +152,7 @@ gls.right[7] = {
   }
 }
 
-gls.right[8] = {
+gls.right[9] = {
   DiffAdd = {
     provider = 'DiffAdd',
     condition = condition.hide_in_width,
@@ -147,7 +160,7 @@ gls.right[8] = {
     highlight = {colors.green,colors.bg},
   }
 }
-gls.right[9] = {
+gls.right[10] = {
   DiffModified = {
     provider = 'DiffModified',
     condition = condition.hide_in_width,
@@ -155,7 +168,7 @@ gls.right[9] = {
     highlight = {colors.orange,colors.bg},
   }
 }
-gls.right[10] = {
+gls.right[11] = {
   DiffRemove = {
     provider = 'DiffRemove',
     condition = condition.hide_in_width,
@@ -164,7 +177,7 @@ gls.right[10] = {
   }
 }
 
-gls.right[11] = {
+gls.right[12] = {
   RainbowBlue = {
     provider = function() return '  ▊' end,
     highlight = {colors.blue,colors.bg}

@@ -3,7 +3,6 @@
 # autostart script by all x11 window managers (the only one i currently use is i3) on my system
 polybar example &
 picom --experimental-backends -b &
-~/wallpapers/wallpaper.sh &
+hsetroot -fill ~/wallpapers/wallpaper
 dunst &
-blueman-applet &
 

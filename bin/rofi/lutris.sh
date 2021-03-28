@@ -1,7 +1,7 @@
 #!/usr/bin/env dash
 
 # a dmenu that manges games installed via lutris
-DMENU="rofi -theme oxide -dmenu"
+DMENU="rofi -dmenu"
 DMENU=${DMENU:-dmenu}
 
 gamelist=$(lutris -l 2> /dev/null) 
