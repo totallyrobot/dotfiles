@@ -12,7 +12,7 @@ my dotfiles using neovim, zsh, powerlevel10k, xfce, rofi, alacritty, picom, and 
         zsh-completions
         pkgfile
         dunst
-        polybar
+        polybar (aur)
 	mpc
 	ncmpcpp
         mpd
