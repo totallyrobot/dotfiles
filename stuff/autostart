@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# autostart script by all x11 window managers (the only one i currently use is i3) on my system
-polybar example &
-picom --experimental-backends -b &
-hsetroot -fill ~/wallpapers/wallpaper
-dunst &
-
